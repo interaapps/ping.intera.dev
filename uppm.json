@@ -1,0 +1,31 @@
+{
+    "name": "ulole-framework",
+    "version": "3.0.0",
+    "repositories": [],
+    "run": {
+        "cli": "cli"
+    },
+    "build": {
+        "type": "phar",
+        "run": "cli",
+        "ignored": [
+            ".git",
+            ".idea",
+            "README.md",
+            ".env"
+        ]
+    },
+    "serve": {
+        "port": 8000,
+        "directory": "public",
+        "routerFile": "index.php"
+    },
+    "modules": {
+        "uloleorm": "2.0.1",
+        "deverm": "5.0.5",
+        "ulole-core": "3.0.6",
+        "interaapps\/jsonplus": "1.0.4"
+    },
+    "namespaceBindings": {},
+    "initScripts": []
+}
