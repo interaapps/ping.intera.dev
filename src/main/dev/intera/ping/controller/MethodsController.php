@@ -9,29 +9,29 @@ use dev\intera\ping\responses\MethodResponse;
 
 #[Controller]
 class MethodsController {
-    #[Route("/", "GET")]
+    #[Route("/", method: "GET")]
     public static function get(Request $req, Response $res){
         return new MethodResponse($req);
     }
 
-    #[Route("/", "HEAD")]
+    #[Route("/", method: "HEAD")]
     public static function head(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "POST")]
+    #[Route("/", method: "POST")]
     public static function post(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "PUT")]
+    #[Route("/", method: "PUT")]
     public static function put(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "DELETE")]
+    #[Route("/", method: "DELETE")]
     public static function delete(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "CONNECT")]
+    #[Route("/", method: "CONNECT")]
     public static function connect(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "OPTIONS")]
+    #[Route("/", method: "OPTIONS")]
     public static function options(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "TRACE")]
+    #[Route("/", method: "TRACE")]
     public static function trace(Request $req){ return new MethodResponse($req); }
-    #[Route("/", "PATCH")]
+    #[Route("/", method: "PATCH")]
     public static function patch(Request $req){ return new MethodResponse($req); }
 
-    #[Route("/([0-9][0-9][0-9])", "GET")]
+    #[Route("/([0-9][0-9][0-9])", method: "GET")]
     public static function code(Request $req, Response $res, $code){
         $res->setCode($code);
         $text = match ($code) {
