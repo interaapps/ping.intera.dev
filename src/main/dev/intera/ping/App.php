@@ -25,6 +25,7 @@ class App extends WebApplication {
 
     public function run() {
         $router = $this->getRouter();
+        $router->getJsonPlus()->setPrettyPrinting(true);
 
         // $router->get("/", fn(Request $req, Response $res) => $res->redirect("https://intera.dev/ping"));
 
