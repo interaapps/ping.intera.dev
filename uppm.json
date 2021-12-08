@@ -22,7 +22,7 @@
     },
     "modules": {
         "uloleorm": "2.0.1",
-        "deverm": "5.0.5",
+        "deverm": "5.0.6",
         "ulole-core": "3.0.6",
         "interaapps\/jsonplus": "1.0.4"
     },
